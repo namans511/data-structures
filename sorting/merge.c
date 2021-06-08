@@ -42,8 +42,8 @@ void mergesort(int arr[], int l, int r) {
 
 int main(int argc, char const *argv[])
 {
-    freopen("input.txt", "r", stdin); 
-    freopen("output.txt", "w", stdout); 
+    freopen("/Users/namansrivastava/Documents/projects/datastr/input.txt", "r", stdin); 
+    freopen("/Users/namansrivastava/Documents/projects/datastr/output.txt", "w", stdout); 
     printf("enter size\n");
     scanf("%d",&size);
     printf("enter elements\n");
