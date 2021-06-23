@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-typedef struct Node {
+// #include <bits/stdc++.h>
+struct Node {
     int data;
     struct Node* next;
-}node;
+};
 
 struct Node* create() {
     struct Node *ptr=(struct Node*)malloc(sizeof(struct Node));
@@ -15,7 +15,7 @@ struct Node* create() {
 void push(struct Node **head, int value) {
     struct Node *temp=create();
     temp->data=value;
-    temp->next=*head;
+    if(head) temp->next=*head;
     *head=temp;
 }
 
@@ -33,9 +33,10 @@ void traverse(struct Node **head) {
     struct Node *ptr=*head;
     printf("linked list:\n");
     while(ptr) {
-        printf("%d\n",ptr->data);
+        printf("%d ",ptr->data);
         ptr=ptr->next;
     }
+    printf("\n\n\n");
 }
 
 void reverse(struct Node **head) {
